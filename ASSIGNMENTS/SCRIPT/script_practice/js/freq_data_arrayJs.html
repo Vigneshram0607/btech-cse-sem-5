@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!---sortingJs.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Freq Data Analysis using JS
+        </title>
+        <style></style>
+        <script type='text/javascript'>
+    	    var ip_size;
+            var arr1=[];
+            var arr1_copy = [];
+            ip_size = parseInt(prompt("Enter Array Size: "));
+            for(let j=0;j<ip_size;j++){
+                arr1[j] = parseInt(prompt("Enter Array element - array["+j+"]: "));
+            }
+            var count=0;
+            var real_count=0;
+            var freq_data = 0;
+            for(var i=0;i<ip_size;i++){
+                for(var j=i;j<ip_size;j++){
+                    if(arr1[i] == arr1[j]){
+                    count++;
+                    }
+                    if (real_count<count){
+                        real_count = count;
+                        freq_data = arr1[j];
+                    }
+                    
+                }
+                count=0;
+            }
+            alert("frq_data: "+freq_data);
+            alert("count: "+real_count);
+
+            if(freq_data == 0){
+                alert("There Is No Frequent Data In your Array!");
+            }
+            else{
+                alert("Frequent Item: "+freq_data+" ("+real_count+"-times)");
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

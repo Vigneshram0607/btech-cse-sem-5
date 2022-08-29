@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!---mail_orderjs.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            RETAIL STORE
+        </title>
+        <style>
+table,th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                h1{
+                    text-align: center; background-color: black; color: white;
+                }
+        </style>
+        <body>
+        <script type='text/javascript'>
+    	// document.writeln('<table>');
+        //     document.writeln('<tr><th>ACCOUNT NUMBER:</th><td>'+accNo+'</td></tr>');
+        //     document.writeln('<tr><th>BALANCE:</th><td>'+newBalance+'</td></tr>');
+
+        //     document.writeln('<tr><th>Allowed credit limit:</th><td>'+c_limit+'</td></tr></table>');
+        
+        document.write("<h1 style='color: orange; text-align: center; background-color:black'>");
+            document.write("MAIL-ORDER HOUSE</h1>");
+
+        
+        var i=0;
+       while(i<5){
+        var prod = parseInt(prompt("product 1, $2.98\nproduct 2, $4.50\nproduct 3, $9.98\nproduct 4, $4.49\nproduct 5, $6.87"));
+          var r1,r2,r3,r4,r5;
+            var q1,q2,q3,q4,q5;
+            switch(prod){
+                case 1: 
+                q1 = parseInt(prompt("ENTER QUANTITY OF PRODUCT-1: "));
+                r1 = 2.98*q1;
+                //q1+=q1;
+                //alert("r1: "+r1+"\nq1: "+q1);
+                break;
+                case 2: 
+                q2 = parseInt(prompt("ENTER QUANTITY OF PRODUCT-2: "));
+                r2 = 4.50*q2;
+                //q2+=q2;
+                break;
+                case 3: 
+                q3 = parseInt(prompt("ENTER QUANTITY OF PRODUCT-3: "));
+                r3 = 9.98*q3;
+                // q3+=q3;
+                break;
+                case 4: 
+                q4 = parseInt(prompt("ENTER QUANTITY OF PRODUCT-4: "));
+                r4 = 4.49*q4;
+                //q4+=q4;
+                break;
+                case 5: 
+                q5 = parseInt(prompt("ENTER QUANTITY OF PRODUCT-5: "));
+                r5 = 6.87*q5;
+                //q5+=q5;
+                break;
+            }
+            i+=1;
+        }
+        // alert("END!");
+        document.writeln('<table>');
+        document.writeln("<tr><th>PROD NUM</th><th>QUANTITY</th><th>RATE</th><th>TOTAL RATE</th></tr>");
+            //for(var j=1;j<=5;j++){            document.writeln('<tr><th>ACCOUNT NUMBER:</th><td>'+accNo+'</td></tr>');
+            document.writeln('<tr><td>PRODUCT - 1</td><td>'+q1 +'</td><td>$2.98</td><td>$'+r1+'</td></tr>');
+            document.writeln('<tr><td>PRODUCT - 2</td><td>'+q2 +'</td><td>$4.50</td><td>$'+r2+'</td></tr>');
+            document.writeln('<tr><td>PRODUCT - 3</td><td>'+q3 +'</td><td>$9.98</td><td>$'+r3+'</td></tr>');
+            document.writeln('<tr><td>PRODUCT - 4</td><td>'+q4 +'</td><td>$4.49</td><td>$'+r4+'</td></tr>');
+            document.writeln('<tr><td>PRODUCT - 5</td><td>'+q5 +'</td><td>$6.87</td><td>$'+r5+'</td></tr>');
+            document.writeln('</table>');
+           
+        </script>
+    </head>
+    
+
+    </body>
+</html>

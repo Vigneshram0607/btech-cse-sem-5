@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Traversal</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<body>
+    <header id='main-header' class='bg-success text-white p-4 mb-3'>
+        <div class='container'>
+            <h1 id='header-title' style='text-align: center;'>Item Listener</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id='main' class='card card-body'>
+            <h2 class='title' >Add Items</h2>
+            <form class='form-inline mb-3'>
+                <input type='text' class='form-control mr-2'>
+                <select class='form-control mr-2'>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type='submit' id ='btn-demo' class='btn btn-dark' value='submit'>
+            </form>
+            <h2 class='title'>Items</h2>
+            <ul id='items' class='list-group'>
+                <li class='list-group-item'>Item 1</li>
+                <li class='list-group-item'>Item 2</li>
+                <li class='list-group-item'>Item 3</li>
+                <li class='list-group-item'>Item 4</li>
+            </ul>
+        </div>
+        <button id="btn-btn">CLICK ME</button>
+        <div id='test-box' style='width: 700px; height: 200px;background-color: rgb(250, 156, 156);'>
+        <h2>HELLO THIS IS DIV-BOX</h2>
+        </div>
+    </div>
+
+    <script src="traversal-main.js"></script>
+</body>
+</html>

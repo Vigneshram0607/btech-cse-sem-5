@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title></title>
+		<script >
+			function writeNum()
+			{
+				var allNum = [];
+				var i = 0;
+				while (i < 20)
+				{
+					var curNum = prompt('Enter 20  number between 10 - 100 :', '');
+					if (!allNum['num' +curNum] && !isNaN(curNum) && curNum >= 10 && curNum <= 100)
+					{
+						document.write(curNum + '<br>');
+						allNum['num' +curNum] = true;
+						i++;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body onload="writeNum()">
+
+</body>
+</html>

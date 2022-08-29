@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUESTION - 3</title>
+</head>
+<style>
+    h1{
+                    text-align: center; background-color: black; color: rgba(255, 166, 0, 0.947);
+    }
+    h2{
+        text-align: center; 
+
+    }
+</style>
+<body>
+    <h1>OCCURENCE OF LETTER</h1>
+    <script>
+        var txt = prompt("Enter the Text :");
+        var searchCharacter = prompt("Enter Then Character to search : ");
+        var i=1;
+        txt=txt.toLowerCase();
+        var n=txt.length;
+        var counter=0;
+        while(true){
+
+            if(txt.includes(searchCharacter)){
+                var a=txt.indexOf(searchCharacter);
+                a+=1;
+                txt=txt.slice(a);
+            }
+            else{
+                break;
+            }
+            counter+=1;
+        }
+        document.writeln("<h2>No Of Time the "+ searchCharacter +" is : " + counter + "</h2>");
+    </script>
+</body>
+</html>

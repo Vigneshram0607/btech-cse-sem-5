@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Date Objects
+        </title>
+    </head>
+    <style>
+        table,th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    height: 50px;
+        }
+        table{
+            width: 100%; 
+            text-align: center;
+            border: 4px solid grey;
+        }
+        h1{
+            text-align: center; background-color: black; color: rgba(255, 166, 0, 0.947);
+        }
+        #design-tr{
+            background-color: black;
+            color: orange;
+        }
+       
+</style>	
+<body>
+
+<!-- <h2>getFullYear(): </h2><p id="getFulYear"></p><br> -->
+<table>
+    <tr id="design-tr">
+        <th >Date Objects</th>
+        <th >Output</th>
+    </tr>
+    <tr>
+        <th>getFullYear():</th>
+        <td id="getFulYear"></td>
+    </tr>
+    <tr>
+        <th>getMonth():</th>
+        <td id="getMonth"></td>
+    </tr>
+    <tr>
+        <th>getDate():</th>
+        <td id="getDate"></td>
+    </tr>
+    <tr>
+        <th>getHours():</th>
+        <td id="getHours"></td>
+    </tr>
+    <tr>
+        <th>getMinutes():</th>
+        <td id="getMinutes"></td>
+    </tr>
+    <tr>
+        <th>getSeconds():</th>
+        <td id="getSeconds"></td>
+    </tr>
+</table>
+
+<script>
+const d = new Date();
+document.getElementById("getFulYear").innerHTML = d.getFullYear();
+document.getElementById("getMonth").innerHTML = d.getMonth() + 1;
+document.getElementById("getDate").innerHTML = d.getDate();
+document.getElementById("getHours").innerHTML = d.getHours();
+document.getElementById("getMinutes").innerHTML = d.getMinutes();
+document.getElementById("getSeconds").innerHTML = d.getSeconds();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DATA IN DB</title>
+</head>
+<style>
+h1{
+        background-color: black;
+        color: orange;
+        text-align: center;
+    }
+
+    </style>
+<body>
+<h1>Students Of SASTRA </h1>
+{% for d in data %}
+<blockquote>
+<h2>NAME: {{ d.name }}</h2>
+<h2>REG-NUM: {{ d.regnum }}</h2>
+
+</blockquote>
+<br><hr>
+{% endfor %}
+</body>
+</html>

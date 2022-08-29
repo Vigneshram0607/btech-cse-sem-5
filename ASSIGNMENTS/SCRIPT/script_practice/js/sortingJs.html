@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!---sortingJs.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            SORTING EXERCISE using Js
+        </title>
+        <style>
+             table,th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                th{
+                    color: orange;
+                }
+        </style>
+        <script type='text/javascript'>
+    	    var ip_size;
+            var arr1=[];
+            var arr1_copy = [];
+            ip_size = parseInt(prompt("Enter Array Size: "));
+            for(let j=0;j<ip_size;j++){
+                x = parseInt(prompt("Enter Array element - array["+j+"]: "));
+                arr1[j] = x;
+                arr1_copy[j] = x;
+
+            }
+// var arr1=[-3,8,7,6,5,-4,3,2,1];
+// var arr1_copy = arr1; 
+var arr2=[];
+var min=arr1[0];
+var pos;
+var max=arr1[0];
+for (i=0; i<arr1.length; i++)
+{
+        if (max<arr1[i]) {
+            max=arr1[i];
+        }
+}
+
+for (var i=0;i<arr1.length;i++)
+{
+        for (var j=0;j<arr1.length;j++)
+        {
+                if (arr1[j]!="x")
+                {
+                        if (min>arr1[j]) 
+                        {
+                                min=arr1[j];
+                                pos=j;
+                        }
+                }
+        }
+        arr2[i]=min;
+        arr1[pos]="x";
+        min=max;
+}
+document.write("<table>");
+document.write("<tr><th>Your Input Array:</th>");
+
+for(var i=0;i<ip_size;i++){
+    document.write("<td>"+arr1_copy[i]+"</td>");
+}
+document.write("</tr>");
+document.write("<tr><th>Your Sorted Array:</th>");
+
+for(var i=0;i<ip_size;i++){
+    document.write("<td>"+arr2[i]+"</td>");
+}
+document.write("</tr>");
+
+document.write("</table>");
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

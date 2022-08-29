@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        DOM Element Change
+    </title>
+    
+</head>
+
+<body>
+    <script>
+        function test(){
+
+            document.getElementsByTagName('p')[0].setAttribute("style","color: green");
+            document.getElementById('division1').style.textAlign = "right";
+            let li_tagname = document.getElementsByTagName('li');
+            for(let i=0;i<li_tagname.length;i++){
+                document.getElementsByTagName('li')[i].style.color = "blue";   
+            }
+            let h1_data = document.querySelectorAll('h1');
+            let p_data = document.querySelectorAll('p');
+            
+            alert("h1 - Data: "+h1_data[0].innerHTML);
+            alert("Paragraph - Data: "+p_data[0].innerHTML);
+        }
+        
+
+    </script>
+<h1 id= "Heading1"> Heading 1</h1>
+    <p id="paragraph1">This is some text1</p>
+<div id="division1">This is some text2</div>
+    <ol>
+    <li>data1</li>
+    <li>data2</li>
+</ol>
+    <ul>
+    <li>data3</li>
+    <li>data4</li>
+    </ul>
+    <input type="button" value="click" onclick="test()">
+     
+    </body>
+
+    
+</html>

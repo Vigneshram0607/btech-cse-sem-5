@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Details</title>
+</head>
+<body>
+    <h1>Conference Details</h1>    
+    <a href="{% url 'form' %}">Fill Form</a>
+    {% for detail in details %}
+    <!-- table -->
+    <hr>
+
+    <table>
+        <tr>
+            <th>Conference Home</th>
+        </tr>
+        <tr>
+            <td>{{ detail.Title }}</td>
+            <td>{{ detail.Date }}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Important Dates</th>
+        </tr>
+        
+        <tr>
+            <td>{{ detail.Deadline }}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Registration Details</th>
+        </tr>
+        
+        <tr>
+            <td>{{ detail.Indianuthor }}</td>
+            <td>{{ detail.Foreignauthor }}</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Contact Details</th>
+        </tr>
+        
+        <tr>
+            <td>Facebook</td>
+            <td>Twitter</td>
+            <td>Website</td>
+        </tr>
+    </table>
+
+
+    </table>
+    {% endfor %}
+</body>
+</html>

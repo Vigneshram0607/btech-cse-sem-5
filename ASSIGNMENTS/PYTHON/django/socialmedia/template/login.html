@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page of SASTRA</title>
+</head>
+<style>
+h1{
+        background-color: black;
+        color: orange;
+        text-align: center;
+    }
+    </style>
+<body>
+
+
+    <h1>LOGIN PAGE</h1>
+    <form  method="post">{% csrf_token %}
+        NAME:<input type="text" name="name"><br>
+        REG-NUM:<input type="text" name="regnum"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

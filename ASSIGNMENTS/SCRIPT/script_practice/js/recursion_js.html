@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       RECURSION In JS
+    </title>
+    <style>
+    </style>
+    <script>
+
+        let count=0;
+      function generateNum(){
+        count+=1;
+        let x=Math.round(Math.random()*10);
+        document.writeln("<p>RANDOM NUMBER: "+x+"\n</p>");
+        if(x==5){
+                   // document.writeln("<h2>Number equals 5</h2>");
+                    document.writeln("<h2>count="+count+"</h2>");
+        }
+        else{
+          return generateNum();
+        }
+
+
+      }
+      generateNum();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

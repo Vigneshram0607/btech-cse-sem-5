@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>QUESTION - 2</title>
+        <style>
+                table,th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                h1{
+                    text-align: center; background-color: black; color: rgba(255, 166, 0, 0.947);
+                }
+        </style>	
+	</head>
+	<body>
+        <h1>REVERSE A STRING</h1>
+
+        <script>
+            window.alert("Hello");
+           
+            
+            function reverseString(str){
+                let newString = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                newString += str[i];
+            }
+            return newString;
+            }
+            
+
+            const string = window.prompt("Enter A line to Reverse: ");
+
+
+            const string_arr = string.split(" ");
+            const resultStr = [];
+            for(let i=0;i<string_arr.length;i++){
+                resultStr[i] = reverseString(string_arr[i]);
+            }
+            const join_arr = resultStr.join();
+            alert(join_arr);
+            </script>
+</body>
+</html>

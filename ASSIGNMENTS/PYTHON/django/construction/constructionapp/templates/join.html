@@ -1,0 +1,38 @@
+<h1>Personal Details</h1>
+    <br/><br/>
+<form method="POST" action="{% url 'join' %}">
+    {%csrf_token%}
+    <div class ='form-group'>
+        <input type="text" class="form-control"
+        placeholder="FIRST NAME" name="fname"
+        value="{{fname}}">
+    </div>
+     <div class ='form-group'>
+        <input type="text" class="form-control"
+        placeholder="LAST NAME" name="lname"
+         value="{{lname}}">
+    </div>
+     <div class ='form-group'>
+        <input type="text" class="form-control"
+        placeholder="AGE" name="age"
+         value="{{age}}">
+    </div>
+     <div class ='form-group'>
+        <input type="email" class="form-control"
+        placeholder="Email address" name="email"
+         value="{{email}}">
+    </div>
+     <div class ='form-group'>
+        <input type="password" class="form-control"
+        placeholder="password" name="passwd"
+         value="{{passwd}}">
+    </div>
+    <div class ='form-group'>
+        <input type="text" class="form-control"
+        placeholder="Landproperty Details" name="landproperty"
+         value="{{landproperty}}">
+    </div>
+    <br/>
+    <button type="Submit" class="bth-secondary">sign up</button>
+</form>
+

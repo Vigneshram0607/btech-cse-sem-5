@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByTagName()</title>
+</head>
+<style>
+    h2,p {
+        text-align: center;
+    }
+    button{
+        margin-left:auto;
+        margin-right:auto;
+        display:block ;
+    }
+
+    </style>
+<body>
+    <h1 style="text-align: center; background-color: black; color: orange;">JavaScript getElementsByTagName() Demo</h1>
+    <h2>1-Heading h2</h2>
+    <p>This is the  paragraph-1.</p>
+    <h2>2-Heading h2</h2>
+    <p>This is the paragraph-2.</p>
+    <h2>3-Heading h2</h2>
+    <p>This is the paragraph-3.</p>
+
+    <button id="btnCount-h2">Count H2</button><br><br>
+    <button id="btnCount-h1">Count H1</button><br><br>
+    <button id="btnCount-p">Count P</button><br><br>
+
+
+    <script>
+        let h2_btn = document.getElementById('btnCount-h2');
+        let h1_btn = document.getElementById('btnCount-h1');
+        let p_btn = document.getElementById('btnCount-p');
+
+        function h1_TagNameCount(){
+            let tagname = document.getElementsByTagName('h1');
+            alert('The Number of H1 tags: '+tagname.length);
+        }
+
+        function h2_TagNameCount(){
+            let tagname = document.getElementsByTagName('h2');
+            alert('The Number of H2 tags: '+tagname.length);
+        }
+
+        function p_TagNameCount(){
+            let tagname = document.getElementsByTagName('p');
+            alert('The Number of p tags: '+tagname.length);
+        }
+
+        h1_btn.addEventListener('click', h1_TagNameCount);
+        h2_btn.addEventListener('click', h2_TagNameCount);
+        p_btn.addEventListener('click', p_TagNameCount);
+
+    </script>
+</body>
+
+</html>

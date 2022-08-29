@@ -1,0 +1,9 @@
+  <h1>Member</h1>
+
+    {% for item in all %}
+        <strong>{{item.fname}} {{item.lame}}</strong><br/>
+        Email:{{item.email}}<br/>
+        Age:{{item.age}}<br/>
+        Property details:{{item.landproperty}}<br/>
+        <hr>
+    {% endfor %}

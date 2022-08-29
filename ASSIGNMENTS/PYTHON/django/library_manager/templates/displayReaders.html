@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 10 Readers</title>
+</head>
+<style>
+h1{
+    background-color: black;
+    text-align: center;
+    color: red;
+    }
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+table, td, th {
+  border: 1px solid black;
+  margin-left:10%;
+}
+</style>
+<body>
+<h1>Top 10 Readers</h1>
+
+{% for d in data %}
+<table>
+    <tr>
+        <th>Reader Name</th>
+        <td>{{d.RName}}</td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td>{{d.City}}</td>
+    </tr>
+    <tr>
+        <th>Contact Number</th>
+        <td>{{d.ContactNumber}}</td>
+    </tr>
+    <tr>
+        <th>Subscription</th>
+        <td>{{d.Subscription}}</td>
+    </tr>
+    <br><br>
+ </table>
+{% endfor %}
+
+</body>
+</html>

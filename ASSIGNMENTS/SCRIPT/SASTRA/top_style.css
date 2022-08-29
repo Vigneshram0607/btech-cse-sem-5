@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+.menu_bar{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    font-size: large;
+}
+
+.menu_bar ul{
+    display: inline-flex;
+    list-style: none;
+    margin-top: 50px;
+    color: blue;
+    
+    height: 100px;  
+    width: 75%;
+}
+
+.menu_bar ul li{
+  /* DIV IN MENUBAR */
+    width: 200px; 
+    /* margin: 5px; */
+    /* margin-top: 10px; */
+    padding: 15px; 
+    /* background-color: aqua;    */
+}
+
+.menu_bar ul li a{
+    text-decoration: none;
+    color: #0D2D62;
+    font-weight: bold;
+}
+
+.menu_bar ul li a:hover{
+    color:blue;
+}
+
+.active, .menu_bar ul li:hover{
+    background-color: rgb(204, 235, 245);
+    height: 70px;
+    border-radius: 8px;
+}
+
+.sub-menu-1{
+    display: none;   
+}
+
+.menu_bar ul li:hover .sub-menu-1{
+    display:block;
+    position: absolute;
+    /* background: rgb(0, 100, 0); */
+    margin-top: .5px;
+    /* margin-left: -5px; */
+}
+
+.menu_bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 1px;
+}
+
+.menu_bar ul li:hover .sub-menu-1 ul li{
+     /* width: 150px; */
+     padding: 10px;
+     border-bottom: 1px solid grey;
+     /* background-color: transparent; */
+     background-color: white;
+     border-radius:0;
+     text-align: left;
+     
+}
+
+#logo{
+    width: 400px;
+    height: 150px;
+    /* margin: 10px 10px 10px 10px; */
+    padding: 0;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+}
+
+.content{
+    padding: 16px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+
+footer{
+    position:relative;
+    bottom: 0;
+    margin-bottom: 0;
+    left: 0;
+    right: 0;
+    background: #113b7e;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500%;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    /* color: aqua; */
+    color: red;
+}
+
+.footer-bottom{
+    /* background: #000; */
+    background: #0D2D62;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.main-cards{
+    display: inline-flex;
+    width: 100%;
+    align-content: center;
+    background-color: rgb(214, 211, 211);
+    height: 500px;
+    padding-left: 150px;
+}
+
+
+.cards{
+    width: 25%;
+    height: 425px;
+    
+    border-radius: 5px;
+    margin: 40px;
+    box-shadow: 2px 2px 5px black;
+    background-color: white;
+    
+}
+
+.cards:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+.title{
+    text-align: center;
+    
+    border-bottom: 5px solid #113b7e;
+    
+    background-color: rgb(214, 212, 212);
+    
+    color: #113b7e;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding:5px;
+}
+
+.desc{
+    
+    padding: 4px;
+    font-weight: 600;
+    font-size: larger;
+    padding-top: 10px;
+    padding-left: 15px;
+    text-indent: 5px;
+    line-height: 1.5;
+}
+
+
+.socials-desc{
+    list-style: none;
+    
+}
+.socials-desc li{
+    margin: 0 10px;
+}
+.socials-desc a{
+    text-decoration: none;
+    color: black;
+}
+.socials-desc a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials-desc a:hover i{
+    color: #0D2D62;
+    
+}
+
+.gallery{
+    text-align: center;
+    width: 100%;
+}
+
+.gallery-images{
+    float: left;
+    padding: 50px;
+    
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(243, 240, 240, 0.932);
+        
+}
+ img{
+    border-radius: 5px;
+    float: left;
+    padding: 30px;
+    
+} 
+
+video{
+    width:100%;
+}
+

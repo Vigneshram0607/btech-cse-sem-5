@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>
+        Order Form 
+        </title>
+        <style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+}
+	</style>
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;  color:orange;">Land Of Boxes Order Form</h1>
+        
+        <form style="text-align: center;">
+            <p>
+            <label>Name: 
+            <input type="text" name="fname" required>
+            </label> 
+            </p>
+            
+            <p>
+            <label>Email:  
+            <input type="email" name="email_address">
+            </label>
+            </p>
+
+            <p>
+                <label>Address:</label> 
+                <textarea name="message" rows="10" cols="25"></textarea>
+            </p>
+
+            <p>
+                <label>Postcode:</label> 
+                <input type="text" name="postcode" required>
+            </p>
+        </form>
+        <table border="1" style="width: 100%;">
+            <tr>
+                <th>Product</th>
+                <th>Part Number</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>EconoBox</td>
+                <td>LB100</td>
+                <td>3</td>
+                <td>R5</td>
+                <td>R15</td>
+            </tr>
+            
+            <tr>
+                <td>Standard Box</td>
+                <td>LB200</td>
+                <td>4</td>
+                <td>R10</td>
+                <td>R40</td>
+            </tr>
+
+            <tr>
+                <td>Premium Box/TD></td>
+                <td>LB300</td>
+                <td>1</td>
+                <td>R15</td>
+                <td>R15</td>
+            </tr>
+
+            <tr>
+                <td>Deluxe Box/TD></td>
+                <td>LB400</td>
+                <td>0</td>
+                <td>R20</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Super Deluxe Box/TD></td>
+                <td>LB500</td>
+                <td>1</td>
+                <td>R30</td>
+                <!--<td>R30</td>-->
+                <td>R30</td>
+            </tr>
+            
+            <tr style="text-align: right;">
+                <td colspan="4">Total:</td>
+                <td>R100</td>
+            </tr>
+
+
+        </table>
+<br><br>
+        <form>
+            <fieldset>
+              <legend>Credit Card Details:</legend>
+              <label>Card Type: </label><br>
+              <input type="radio" id="mastercard"  value="MasterCard">
+              <label for="mastercard">MasterCard</label><br>
+              <input type="radio" id="visa" value="Visa">
+              <label for="visa">Visa</label><br>
+              <input type="radio" id="american_express" value="American Express">
+              <label for="american_express">American Express</label><br>
+              <input type="radio" id="diners_club" value="Diners Club">
+              <label for="diners_club">Diners Club</label><br>
+              <label>   <br>Card Number: </label>
+              <input type="text">
+              <label>   Expiry Date: </label>
+              <input type="text">
+            </fieldset>
+          </form>
+
+          <label><b>Address:</b></label> 
+                <textarea name="message" rows="10" cols="25"></textarea><br>
+                <div class="center">
+        <button type="submit" form="form1" value="Submit">Submit Order</button><br>
+        <input type="reset" value="Reset">
+        </div>
+    
+</body>
+</html>
+
+
+                
+

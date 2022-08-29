@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DISPLAY ITEMS</title>
+</head>
+<style>
+h1{
+        color: orange;
+        background-color: black;
+        text-align: center;
+    }
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+</style>
+<body>
+<!--This is DISPLAY PAGE-->
+    <h1>ITEM DETAILS</h1>
+    <table>
+        <tr>
+        <th>ITEM ID</th>
+        <th>ITEM NAME</th>
+        <th>STOCK</th>
+        <th>PRICE</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+        </tr>
+<!--This is for loop in html by python to retrive lists data-->
+    {% for b in items %}
+        <tr>
+            <td>{{ b.item_id }}</td>
+            <td>{{ b.item_name }}</td>
+            <td>{{ b.stock }}</td>
+            <td>{{ b.price }}</td>
+            <td><a href="{% url 'update' b.item_id %}"></a><input type="button" value="Update Item"/></td>
+            <td><a href="{% url 'delete' b.item_id %}"></a><input type="button" value="Delete Item"/></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>

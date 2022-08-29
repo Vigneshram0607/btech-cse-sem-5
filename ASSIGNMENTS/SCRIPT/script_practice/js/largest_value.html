@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LARGEST VALUE
+    </title>
+    <style>
+        table,th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                h1{
+                    text-align: center; background-color: black; color: white;
+                }
+    </style>
+    <script>
+        var counter = 1
+        var max = 0
+        document.writeln("<table>");
+        document.writeln("<tr style = 'background-color: black; color: orange;'><th>SALES-PERSON NUM</th><th>No. OF UNITS</th></tr>")
+        while (counter <= 10) {
+            value = parseInt(prompt("Enter the number of units sold by each salesperson-"+counter+"."));
+            if (value > max){
+                max = value;
+                // alert("MAXIMUM");
+            }
+            
+            document.writeln("<tr><td>salesperson - "+counter+"</td><td>"+value+"</td></tr>");
+            counter+=1;
+        }
+        document.writeln("</table>");
+        alert("Max: "+max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

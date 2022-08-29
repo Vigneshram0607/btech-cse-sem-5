@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!---factorialjs.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            FACTORIAL EXERCISE
+        </title>
+        <style>
+
+        </style>
+        <script type='text/javascript'>
+    		// document.write("<h1 style='color: orange; text-align: center; background-color:black'>");
+            // document.write("FACTORIAL");
+
+            function factorial(n){
+                if(n==0 || n==1){
+                    return 1;
+                }else{
+                    return n*factorial(n-1);
+                }
+            }
+            
+            function reverse(n){
+                var temp, sum=0;
+                while(n>0){
+                    temp = n%10;
+                    sum = sum*10 + temp;
+                    n = parseInt(n/10);
+                }
+                return sum;
+            }
+
+            function prime(n){
+                document.write("<h1 style='color: orange; text-align: center; background-color:black'>");
+                document.write("PRIME NUMBER</h1>");
+
+                document.write("<h3 style='text-align: center;'>");
+                document.write("Prime Number from 1 to "+n+" are:</h3>");
+                document.write("<h3 style='text-align:center;'>");
+                for(var i=1;i<=n;i++){
+                    var flag=0;
+                    for(j=2;j<i;j++){
+                        if(i%j == 0){
+                            flag = 1;
+                            break;
+                        }
+                    }
+
+                    if(i>1 && flag == 0){
+                        // document.writeln("<p style='text-align:center;'>"+i+"</p>");
+                        document.write(i+" ");
+                    }
+                }
+                document.write("</h3>");
+            }
+
+            function palindrome(str){
+                var len = str.length;
+                // window.alert("LENGTH: "+len);
+                for(var i=0; i<(len)/2; i++){
+                    if(str[i] !== str[len - 1 - i]){
+                        return "Given String is NOT A PALINDROME";
+                    }
+                }
+                return "Given String is A PALINDROME";
+            }
+
+            // var f= window.prompt("ENTER N TO FIND FACTORIAL: ");
+            // var result = factorial(f);
+            // window.alert("FACTORIAL OF "+f+" is "+result);
+            while(true){
+            var choice = window.prompt("Enter 1 - [Factorial of N], 2 - [Reverse of N], 3 - [Prime Num from 1 to N], 4 - [check Palindrome] ");
+            // window.alert(choice);
+            switch(choice){
+                case "1": 
+                // window.alert("hi"); 
+                var n = window.prompt("Enter N to Print Factorial of N: ");
+                        var result = factorial(n);
+                        window.alert("Factorial of "+n+" is "+result);        
+                break;
+                case "2": 
+                var n = window.prompt("Enter Number to reverse: ");
+                var result = reverse(n);
+                window.alert("Reverse of "+n+" is "+result);
+                break; //Reverse of N
+                case "3": 
+                var n = window.prompt("Enter N to print prime number from 1 to N: ");
+                // var result = prime(n);
+                prime(n);
+                // window.alert(result);
+                break; //Prime NUm from 1 to N
+                case "4": 
+                var str = window.prompt("Enter String To check Palindrome: ");
+                var result = palindrome(str);
+                window.alert(result);
+                break; //Palindrome
+            }
+        var again = window.prompt("Again [y/n]: ");
+        if(again == 'n'){
+            break;
+        }
+        }
+        document.write("<h1 style='color: orange; text-align: center; background-color:black'>");
+        document.write("✨ THANK YOU ✨</h1>");
+            // window.alert(result);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>lab 4 q-3</title>
+    
+        </head>
+  <body>
+<h1 style="text-align: center; background-color: black; color: orange;">LAB 4</h1>
+      <h3 align="center">THIS IS HEADING H3</h3>
+      <p align="center">This is Only P tag</p>
+
+<div>
+<h3 align="center">THIS IS HEADING H3 and Inside DIV tag</h3>
+<p align="center">This is an paragraph with P tag and <span>SPAN tag</span> . </p>
+    </div>
+    <center>
+    <input type="button" value="click" onclick="colors()">
+    </center>
+    
+<script type="text/javascript">
+function colors()
+{
+  var i=0;
+  n=document.getElementsByTagName("h3").length;
+  while(i<n){
+  document.getElementsByTagName("h3")[i].style.color="magenta";
+  i+=1;
+  }
+  i=0;
+  n=document.getElementsByTagName("p").length;
+  while(i<n){
+  document.getElementsByTagName("p")[i].style.color="red";
+  i+=1;
+  }
+
+  i=0;
+  n=document.getElementsByTagName("div").length;
+  while(i<n){
+  document.getElementsByTagName("div")[i].style.backgroundColor="green";
+  i+=1;
+  }
+
+  i=0;
+  n=document.getElementsByTagName("span").length;
+  while(i<n){
+  document.getElementsByTagName("span")[i].style.color="orange";
+  i+=1;
+  }
+}
+</script>
+  </body>
+</html>

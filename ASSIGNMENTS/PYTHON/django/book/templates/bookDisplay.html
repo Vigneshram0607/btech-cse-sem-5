@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOK DETAILS</title>
+</head>
+<style>
+    h1{
+        color: orange;
+        background-color: black;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>ADD BOOK DETAILS</h1>
+    <table>
+        <tr>
+        <th>TITLE</th>
+        <th>AUTHORS</th>
+        <th>PUBLISHER</th>
+        <th>PUBLICATION DATE</th>
+        </tr>
+    {% for b in book %}
+        <tr>
+            <td>{{ b.title }}</td>
+            <td>{{ b.authors }}</td>
+            <td>{{ b.publisher }}</td>
+            <td>{{ b.publication_date }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
+<!--
+sales/models.py
+
+from django.db import models
+
+# Create your models here.
+class Store(models.Model):
+    id = models.IntegerField(primary_key=True)
+    store_name = models.CharField(max_length=15)
+    state = models.CharField(max_length=15)
+    country = models.CharField(max_length=15)
+
+    class Meta:
+        db_table = 'store'
+        ordering = ("-country","-state",)
+
+    def __str__(self):
+        return " %s, %s, %s" % (self.store_name, self.state, self.country)
+
+class Product(models.Model):
+    id = models.IntegerField(primary_key=True)
+    product_name = models.CharField(max_length=25)
+    brand = models.CharField(max_length=15)
+    category = models.CharField(max_length=15)
+
+    class Meta:
+        db_table = 'product'
+        ordering = ("-brand",)
+
+    def __str__(self):
+        return "%s, %s, %s" % (self.product_name, self.brand, self.category)
+
+
+class Sale(models.Model):
+    date = models.DateField()
+    store_id = models.ForeignKey(Store,on_delete=models.CASCADE)
+    product_id = models.ForeignKey(Product,on_delete=models.CASCADE)
+    units_sold = models.IntegerField()
+
+    class Meta:
+        db_table = 'sale'
+        ordering = ("-date","-store_id","-product_id")
+
+    def __str__(self):
+        return "{0}, {1}, {2}, {3}".format(self.date, self.store_id, self.product_id, self.units_sold)
+
+-->

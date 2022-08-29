@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+        <head>
+           <title>Basic DOM Functionality</title>
+          <style type = "text/css">
+             h1, h3       { text-align: center;
+                            font-family: tahoma, geneva, sans-serif }
+             p            { margin-left: 5%;
+                            margin-right: 5%;
+                            font-family: arial, helvetica, sans-serif }
+             ul           { margin-left: 10% }
+             a            { text-decoration: none }
+             a:hover      { text-decoration: underline }
+             .nav         { width: 100%;
+                            border-top: 3px solid grey;
+                            padding-top: 10px }
+             .highlighted { background-color: rgb(120, 248, 115) }
+             .submit      { width: 120px;
+               /* background-color: rgb(224, 92, 92); */
+                            }
+          </style>
+          <script>
+           
+             var currentNode; 
+             var idcount = 0; 
+             function byId()
+             {
+              var id = document.getElementById( "gbi" ).value;
+             var target = document.getElementById( id );
+
+             if ( target )
+                switchTo( target );
+          }
+
+          function appendNode()
+          {
+             var newNode = createNewNode(
+                document.getElementById( "append" ).value );
+             currentNode.appendChild( newNode );
+             switchTo( newNode );
+          } 
+
+          
+          function replaceCurrent()
+          {
+             var newNode = createNewNode(
+                document.getElementById( "replace" ).value );
+             currentNode.parentNode.replaceChild( newNode, currentNode );
+             switchTo( newNode );
+          } 
+
+          
+          function remove()
+          {
+             if ( currentNode.parentNode == document.body )
+                alert( "Can't remove a top-level element." );
+             else
+             {
+                var oldNode = currentNode;
+                switchTo( oldNode.parentNode );
+                currentNode.removeChild( oldNode );
+             } 
+          } 
+           
+          function parent()
+          {
+             var target = currentNode.parentNode;
+             if ( target != document.body )
+                switchTo( target );
+             else
+                alert( "No parent." );
+          } 
+          
+          
+          function createNewNode( text )
+          {
+             var newNode = document.createElement( "p" );
+             nodeId = "new" + idcount;
+             ++idcount;
+             newNode.id = nodeId;
+            text = "[" + nodeId + "] " + text;
+            newNode.appendChild(document.createTextNode( text ) );
+            return newNode;
+         } 
+
+
+         function switchTo( newNode )
+         {
+            currentNode.className = ""; 
+            currentNode = newNode;
+            currentNode.className = "highlighted";
+            document.getElementById( "gbi" ).value = currentNode.id;
+         } 
+        
+      </script>
+   </head>
+   <body onload = "currentNode = document.getElementById( 'bigheading' )">
+      <h1 id = "bigheading" class = "highlighted">
+         [bigheading] This Is h1-Element</h1>
+      <h3 id = "smallheading">[smallheading] This Is h3-Element</h3>
+      <p id = "para1">[para1] This is Paragraph-1, which is p-element.</p>
+      <p id = "para2">[para2] This is an Sample of 'p' and Below elements are of type LIST</p>
+      <ul id = "list">
+         <li id = "item1">[item1] getElementById and parentNode</li>
+        
+                   <li id = "item2">[item2] insertBefore and appendChild</li>
+         <li id = "item3">[item3] replaceChild and removeChild </li>
+      </ul>
+      <div id = "nav" class = "nav">
+         <form onsubmit = "return false" action = "">
+            <table>
+               <tr>
+                  <td><input type = "text" id = "gbi"
+                     value = "bigheading" /></td>
+                     <td><input type = "submit" value = "Highlight"
+                                              onclick = "byId()" class = "submit" /></td>
+                                        </tr>
+                                        <tr>
+                                           <td><input type = "text" id = "append" /></td>
+                                           <td><input type = "submit" value = "Insert"
+                                              onclick = "appendNode()" class = "submit" /></td>
+                                        </tr>
+                                        <tr>
+                                           <td><input type = "submit" value = "Remove"
+                                              onclick = "remove()" class = "submit" /></td>
+                                        </tr>
+                                      </table>
+                                    </form>
+         </div>
+   </body>
+</html>
+                      

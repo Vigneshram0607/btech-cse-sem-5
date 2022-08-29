@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>QUESTION - 1</title>
+        <style>
+                table,th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                h1{
+                    text-align: center; background-color: black; color: rgba(255, 166, 0, 0.947);
+                }
+</style>
+		
+	</head>
+	<body>
+        <h1>TELEPHONE NUMBER</h1>
+          <table>
+              <tr>
+                  <th>Area Code: </th>
+                  <td id="area-code"></td>
+              </tr>
+              <tr>
+                  <th>Phone Number: </th>
+                  <td id="ph-num"></td>
+              </tr>
+          </table>
+
+          <script >
+			const string = prompt("Enter Your Telephone Number: ", "(XXX) XXX-XXXX");
+            const str_arr = string.split(" ");
+            const area_code = str_arr[0];
+            const ph_num = str_arr[1].split(" ")
+            // alert(string+" \n"+str_arr+" \n"+area_code+" \n"+ph_num+" \n");
+            document.getElementById("area-code").innerHTML = area_code;
+            document.getElementById("ph-num").innerHTML = ph_num;
+
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE ORDER FORM</title>
+</head>
+<style>
+    h1{
+        background-color: black;
+        color: orange;
+        text-align: center;
+    }
+    table{
+        width: 40%;
+        margin-left: 25%;
+    }
+    table, th, td {
+        border: 1px solid black;
+        background-color: rgb(201, 201, 201);
+    }
+    #submit-btn{
+        /* background-color: rgb(169, 233, 169); */
+        text-align: center;
+        margin-left: 40%;
+    }
+</style>
+<body>
+    <h1>SAMPLE ORDER FORM</h1>
+    <p>Enter the Required Quantity:</p>
+    <form action="">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Enter Your Quantity</th>
+            </tr>
+            <tr>
+                <td><label for="dvd">DVD</label></td>
+                <td><label for="dvd-price">19.99</label></td>
+                <td><input type="number" name="dvd-quantity" min="0"></td>
+            </tr>
+            <tr>
+                <td><label for="cd">CD</label></td>
+                <td><label for="cd-price">12.99</label></td>
+                <td><input type="number" name="cd-quantity" min="0"></td>
+            </tr>
+            <tr>
+                <td><label for="diskette">Diskette</label></td>
+                <td><label for="diskette-price">1.99</label></td>
+                <td><input type="number" name="diskette-quantity" min="0"></td>
+            </tr>
+            <tr>
+                <td colspan="3" ><input type="submit" id="submit-btn"value="Check Out"/></td>
+            </tr>
+        </table>
+        <!-- <input type="submit" id="submit-btn"value="Check Out"/> -->
+    </form>
+</body>
+</html>

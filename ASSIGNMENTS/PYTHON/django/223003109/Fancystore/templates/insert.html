@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INSERT ITEM</title>
+</head>
+<style>
+    h1{
+        color: orange;
+        background-color: black;
+        text-align: center;
+    }
+</style>
+<body>
+<!--This is to insert data items-->
+    <h1>ADD ITEM DETAILS</h1>
+<form method="post">
+    <p><strong>NOTE:</strong> The minimum stock should be 25</p>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="reset" value="Reset">
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>

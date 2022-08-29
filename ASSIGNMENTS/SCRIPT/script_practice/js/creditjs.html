@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!---creditjs.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            CREDIT SYSTEM
+        </title>
+        <style>
+table,th, td {
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                h1{
+                    text-align: center; background-color: black; color: white;
+                }
+        </style>
+        <body>
+        <script type='text/javascript'>
+    	document.write("<h1 style='color: orange; text-align: center; background-color:black'>");
+            document.write("CREDIT CALCULATOR</h1>");
+
+        var accNo=prompt("Enter Account number:");
+  var old_bal=parseInt(prompt("Enter Balance at the beginning of the month"));
+  var items=parseInt(prompt("Total of all items charged this month"));
+  var charges=parseInt(prompt("Total of all credits applied to this account this month"));
+  var c_limit=parseInt(prompt("Enter Allowed credit limit: "));
+        
+  var newBalance=old_bal+items-charges;
+//   alert("New Balance :"+newBalance);
+//   alert("ACCOUNT NUMBER:\t"+accNo);
+  if(newBalance>c_limit){
+    alert("Credit limit exceeded.");       
+  }
+  else{
+    // alert("ACCOUNT NUMBER: "+accNo+" \n BALANCE: "+newBalance+"\nTotal of all items charged by this customer this month: "+items);
+    document.writeln('<table>');
+            document.writeln('<tr><th>ACCOUNT NUMBER:</th><td>'+accNo+'</td></tr>');
+            document.writeln('<tr><th>BALANCE:</th><td>'+newBalance+'</td></tr>');
+
+            document.writeln('<tr><th>Allowed credit limit:</th><td>'+c_limit+'</td></tr></table>');
+            //document.writeln('<tr><th>ACCOUNT NUMBER:</th><td>'+accNo+'</td></tr>');
+        }
+
+
+        
+        </script>
+    </head>
+    
+
+    </body>
+</html>

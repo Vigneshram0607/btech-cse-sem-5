@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+        loop tt
+        </title>
+            <style>
+                table,th, td {
+                            border: 1px solid black;
+                            /* border-collapse: collapse; */
+                            height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    /* border: 4px solid grey; */
+                }
+                h1{
+                    text-align: center; background-color: black; color: white;
+                }
+
+                
+        </style>
+        <script>
+            document.writeln('<h1>LOOPING EXERCISE</h1>');
+            document.writeln('<table>');
+            document.writeln('<tr><th>N</th><th>10*N</th><th>100*N</th><th>1000*N</th></tr>');
+            
+            for(var i=1;i<=6;i++){
+                document.writeln('<tr><td>'+i+'</td><td>'+10*i+'</td><td>'+100*i+'</td><td>'+1000*i+'</td></tr>');
+            }
+           
+            document.writeln('</table>');
+        </script>
+    </head>
+        <body>
+            
+        </body>
+</html>
+    

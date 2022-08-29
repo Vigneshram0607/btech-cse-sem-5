@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <a href="{% url 'index' %}"> Home</a>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Fill Up Form</h1>
+        <label for="conference_name">Conference Title</label>
+        <input type="text" name="conference_name" id="conference_name">
+
+        <label for="conference_date">Conference Date</label>
+        <input type="date" name="conference_date" id="conference_date">
+
+        <label for="conference_deadline">Conference Deadline</label>
+        <input type="date" name="conference_deadline" id="conference_deadline">
+
+        <label for="indian_author">Indian Author</label>
+        <input type="text" name="indian_author" id="indian_author">
+
+        <label for="foreign_author">Foreign Author</label>
+        <input type="text" name="foreign_author" id="foreign_author">
+        
+
+        <input type="submit" name="submit" value="Submit">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!---sumOfArrayJS.html-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Sum of Array Elements Using JS
+        </title>
+        <style></style>
+        <script type='text/javascript'>
+    	    var ip_size=10;
+            var arr1=[];
+            var sum=0;
+            for(let j=0;j<ip_size;j++){
+                arr1[j] = parseInt(prompt("Enter Array element - array["+(j+1)+"]: "));
+                sum+=arr1[j];
+            }
+            if(sum!=0){
+                alert("Sum of Given Array Elements "+arr1+" is "+sum+" ");
+            }
+            else{
+                alert("Technical Error!");
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script type="text/javascript">
+  var accNo=prompt("Enter Account number:");
+  var balanceAtBeginningOfMonth=parseInt(prompt("Enter Balance at the beginning of the month"));
+  var charges=parseInt(prompt("Total of all items charged this month"));
+  var credits=parseInt(prompt("Total of all credits applied to this account this month"));
+  var creditLimit=10000;
+  var newBalance=balanceAtBeginningOfMonth+charges-credits;
+  alert("New Balance :"+newBalance);
+  if(newBalance>creditLimit){
+    alert("Credit limit exceeded.");
+  }
+</script>
+  </body>
+</html>

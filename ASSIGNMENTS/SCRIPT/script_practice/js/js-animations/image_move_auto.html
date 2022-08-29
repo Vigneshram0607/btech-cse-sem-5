@@ -1,0 +1,51 @@
+<html>   
+   <head>
+      <title>JavaScript Animation</title> 
+      <style>
+          #container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+      </style>     
+      <script type = "text/javascript">
+         
+            function moveRight(){
+                let id = null;
+  const elem = document.getElementById("animate");   
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5)
+  function frame() {
+    if (pos == 1200) {
+      clearInterval(id);
+    } else {
+      pos+=5; 
+      elem.style.left = pos + "px"; 
+    }
+    
+  }
+  setTimeout(function reset() {elem.style.left = 0 + "px";},1500);
+
+
+            }
+   
+         
+      </script>
+   </head>
+   
+   <body>   
+      <div id='container'>
+          <div id='animate'>
+         <img id = "myImage" src = "images-animations/sakthiman.jpg" width="250px" height="250px"/>
+        </div>
+    </div>
+         <p>Click Button to Move <strong>SAKTHIMAN</strong> to Right</p>
+         <p><button onclick="moveRight()">Click Me</button></p>
+   </body>
+</html>

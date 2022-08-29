@@ -1,0 +1,93 @@
+<html>   
+   <head>
+      <title>JavaScript Animation</title> 
+      <style>
+          #container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+      </style>     
+      <script type = "text/javascript">
+         
+            // var imgObj = null;
+            
+            // function init() {
+            //    imgObj = document.getElementById('myImage');
+            //    imgObj.style.position= 'relative'; 
+            //    imgObj.style.left = '0px'; 
+            // }
+            // function moveRight() {
+            //    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            // }
+            
+            // window.onload = init;
+
+ 
+            // function moveRight(){
+            //     console.log("SUCCESS-1");
+            // let id = null;
+            // const elem = document.getElementById("animate");   
+            // let pos = 0;
+            // // clearInterval(id);
+            // id = setInterval(frame, 5)
+            // function frame() {
+            //     // if (pos == 1000) {
+            //     // clearInterval(id);
+            //     // } else {
+            //     // pos+=10; 
+            //     // elem.style.left = pos + "px"; 
+            //     // }
+            //     if (pos == 10) {
+            //     clearInterval(id);
+            // }
+            //     else{
+            //      pos+=1; 
+            //     elem.style.left = pos + "px"; 
+            //     }
+
+            //     // elem.style.left += 100 + 'px';
+            //     // console.log("SUCCESS-2");
+            //     console.log(elem.style.left);
+
+            //     // }
+
+
+            
+    
+        // }
+    // }
+
+
+    var elem = null;
+            function init() {
+               elem = document.getElementById('animate');
+               elem.style.position= 'relative'; 
+               elem.style.left = '0px'; 
+            }
+            function moveRight() {
+            console.log('success-2');
+
+                elem.style.left = parseInt(elem.style.left) + 10 + 'px';
+            }
+            console.log('success-1');
+            window.onload = init;
+         
+      </script>
+   </head>
+   
+   <body>   
+      <div id='container'>
+          <div id='animate'>
+         <img id = "myImage" src = "images-animations/sakthiman.jpg" width="250px" height="250px"/>
+        </div>
+    </div>
+         <p>Click Button to Move <strong>SAKTHIMAN</strong> to Right</p>
+         <p><button onclick="moveRight()">Click Me</button></p>
+   </body>
+</html>

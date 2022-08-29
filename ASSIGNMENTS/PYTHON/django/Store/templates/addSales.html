@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SALES FORM</title>
+</head>
+<style>
+    h1{
+        color: orange;
+        background-color: black;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>ADD SALES DETAILS</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="reset" value="Reset">
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LAB REV CIA-1
+    </title>
+    <style>
+        table,th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    height: 50px;
+                }
+                table{
+                    width: 100%; 
+                    text-align: center;
+                    border: 4px solid grey;
+                }
+                th{
+                    color: orange;
+                }
+                .si{
+                    background-color: yellow;
+                }
+                .ci{
+                    background-color: red;
+                }
+                .root{
+                    background-color: green;
+                }
+                .date{
+                    background-color: blue;
+                }
+    </style>
+    <script>
+        function simple_interest(){
+        var SI = (p * t * r) / 100;
+    return SI;
+}
+
+    function compound_interest(principal, time, rate, n){
+        // alert("principal: "+principal+" time: "+time+" rate: "+rate+" n: "+n);
+        var amount = principal*(Math.pow((1 + (rate/n)), (n*time)));
+        
+        amount = Math.round(amount);
+        // alert("AMOUNT: "+amount);
+   var interest = amount - principal;
+//    alert("interest: "+Math.round(interest));
+   return Math.round(interest);
+    }
+    function sqrt_num(){
+        var sqrt_n = parseInt(prompt("Enter Number to Find Square Root: "));
+        return Math.sqrt(sqrt_n);
+    }
+
+    function date_time(){
+        var d_t_string = new Date().toLocaleString();
+        return d_t_string; 
+    }
+    
+    // Calculate simple interest
+    var p, t, r, SI;
+    p = parseInt(prompt("Enter the Principle amount to calc Simple Interest: "));
+    t = parseInt(prompt("Enter the Time to calc Simple Interest: "));
+    r = parseInt(prompt("Enter the Interest Rate to calc Simple Interest: "));
+
+    var principal = parseInt(prompt("Enter the Principle amount to calc Compound Interest: "));
+    var time = parseInt(prompt("Enter the Time to calc Compound Interest: "));
+    var rate = parseFloat(prompt("Enter the Interest Rate to calc Compound Interest: "));
+    var n = 12;  
+
+    document.writeln("<table>");
+        document.writeln("<tr><th>OPERATION</th><th>RESULT</th></tr>");
+        document.writeln("<tr id='si' style='background-color: yellow;'><td>Simple Interest</td><td>"+simple_interest(p,t,r)+"</td></tr>");
+        document.writeln("<tr id='ci' style='background-color: red;'><td>Compound Interest</td><td>"+compound_interest(principal, time, rate, n)+"</td></tr>");
+        document.writeln("<tr id='root' style='background-color: green;'><td>Square Root Of a Number</td><td>"+sqrt_num()+"</td></tr>");
+        document.writeln("<tr id='date' style='background-color: blue;'><td>Date And Time</td><td>"+date_time()+"</td></tr>");
+    document.writeln("</table>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
